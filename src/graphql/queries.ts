@@ -16,6 +16,8 @@ export const GET_PRODUCTS = gql`
           items {
             id
             price
+            priceWithTax
+            currencyCode
             name
             featuredAsset {
               id
@@ -24,6 +26,18 @@ export const GET_PRODUCTS = gql`
           }
         }
       }
+    }
+  }
+`;
+
+export const GET_SUBTOTAL = gql`
+  query {
+    activeOrder {
+      totalWithTax
+      total
+      subTotal
+      subTotalWithTax
+      currencyCode
     }
   }
 `;

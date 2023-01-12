@@ -34,7 +34,6 @@ const StyledProductList = styled.div`
 export function ProductList() {
   const { data, loading } = useQuery<{ products: Products }>(GET_PRODUCTS);
   const products = parseProductList(data?.products);
-  console.log('data.items:', data);
 
   if (loading) return <p>Loading...</p>;
   return (

@@ -12,6 +12,8 @@ const parseProductList = (products?: Products): Product[] => {
         price: variant.price,
         description: product.description,
         image: variant.featuredAsset || product.featuredAsset,
+        priceWithTax: variant.priceWithTax,
+        currencyCode: variant.currencyCode,
       })
     )
   );

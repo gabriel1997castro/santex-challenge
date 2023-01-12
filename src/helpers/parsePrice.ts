@@ -1,5 +1,5 @@
-export const parsePrice = (price: number) =>
+export const parsePrice = (price?: number, currencyCode?: string) =>
   Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'USD',
-  }).format(price / 100);
+    currency: currencyCode || 'USD',
+  }).format((price || 0) / 100);

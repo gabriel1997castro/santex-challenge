@@ -32,7 +32,7 @@ const afterwareLink = new ApolloLink((operation, forward) => {
   });
 });
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: ApolloLink.from([afterwareLink, commerceLink]),
 });

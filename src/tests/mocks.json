@@ -1,0 +1,138 @@
+{
+  "products": {
+    "items": [
+      {
+        "id": "1",
+        "name": "Laptop",
+        "description": "Now equipped with seventh-generation Intel Core processors, Laptop is snappier than ever. From daily tasks like launching apps and opening files to more advanced computing, you can power through your day thanks to faster SSDs and Turbo Boost processing up to 3.6GHz.",
+        "featuredAsset": {
+          "id": "1",
+          "preview": "https://demo.vendure.io/assets/preview/71/derick-david-409858-unsplash__preview.jpg"
+        },
+        "variantList": {
+          "items": [
+            {
+              "id": "1",
+              "price": 129900,
+              "priceWithTax": 155880,
+              "currencyCode": "USD",
+              "name": "Laptop 13 inch 8GB",
+              "featuredAsset": null
+            },
+            {
+              "id": "2",
+              "price": 139900,
+              "priceWithTax": 167880,
+              "currencyCode": "USD",
+              "name": "Laptop 15 inch 8GB",
+              "featuredAsset": null
+            },
+            {
+              "id": "3",
+              "price": 219900,
+              "priceWithTax": 263880,
+              "currencyCode": "USD",
+              "name": "Laptop 13 inch 16GB",
+              "featuredAsset": null
+            },
+            {
+              "id": "4",
+              "price": 229900,
+              "priceWithTax": 275880,
+              "currencyCode": "USD",
+              "name": "Laptop 15 inch 16GB",
+              "featuredAsset": null
+            },
+            {
+              "id": "105",
+              "price": 219900,
+              "priceWithTax": 263880,
+              "currencyCode": "USD",
+              "name": "Laptop 16 inch 16GB",
+              "featuredAsset": null
+            },
+            {
+              "id": "106",
+              "price": 219900,
+              "priceWithTax": 263880,
+              "currencyCode": "USD",
+              "name": "Laptop 16 inch 8GB",
+              "featuredAsset": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "2",
+        "name": "Tablet",
+        "description": "If the computer were invented today, what would it look like? It would be powerful enough for any task. So mobile you could take it everywhere. And so intuitive you could use it any way you wanted — with touch, a keyboard, or even a pencil. In other words, it wouldn’t really be a \"computer.\" It would be Tablet.",
+        "featuredAsset": {
+          "id": "2",
+          "preview": "https://demo.vendure.io/assets/preview/b8/kelly-sikkema-685291-unsplash__preview.jpg"
+        },
+        "variantList": {
+          "items": [
+            {
+              "id": "5",
+              "price": 32900,
+              "priceWithTax": 39480,
+              "currencyCode": "USD",
+              "name": "Tablet 32GB",
+              "featuredAsset": null
+            },
+            {
+              "id": "6",
+              "price": 45500,
+              "priceWithTax": 54600,
+              "currencyCode": "USD",
+              "name": "Tablet 128GB",
+              "featuredAsset": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "3",
+        "name": "Wireless Optical Mouse",
+        "description": "The Logitech M185 Wireless Optical Mouse is a great device for any computer user, and as Logitech are the global market leaders for these devices, you are also guaranteed absolute reliability. A mouse to be reckoned with!",
+        "featuredAsset": {
+          "id": "3",
+          "preview": "https://demo.vendure.io/assets/preview/a1/oscar-ivan-esquivel-arteaga-687447-unsplash__preview.jpg"
+        },
+        "variantList": {
+          "items": [
+            {
+              "id": "7",
+              "price": 1899,
+              "priceWithTax": 2279,
+              "currencyCode": "USD",
+              "name": "Wireless Optical Mouse",
+              "featuredAsset": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "4",
+        "name": "32-Inch Monitor",
+        "description": "The UJ59 with Ultra HD resolution has 4x the pixels of Full HD, delivering more screen space and amazingly life-like images. That means you can view documents and webpages with less scrolling, work more comfortably with multiple windows and toolbars, and enjoy photos, videos and games in stunning 4K quality. Note: beverage not included.",
+        "featuredAsset": {
+          "id": "4",
+          "preview": "https://demo.vendure.io/assets/preview/d2/daniel-korpai-1302051-unsplash__preview.jpg"
+        },
+        "variantList": {
+          "items": [
+            {
+              "id": "8",
+              "price": 31000,
+              "priceWithTax": 37200,
+              "currencyCode": "USD",
+              "name": "32-Inch Monitor",
+              "featuredAsset": null
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
