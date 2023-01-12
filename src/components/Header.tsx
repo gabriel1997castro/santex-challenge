@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
 `;
 
 export function Header() {
-  const { data } = useQuery<{ activeOrder: Order }>(GET_SUBTOTAL);
+  const { data, loading } = useQuery<{ activeOrder: Order }>(GET_SUBTOTAL);
 
   return (
     <StyledHeader>
@@ -43,10 +43,12 @@ export function Header() {
       />
       <div className="header-price-container">
         <div>
-          {parsePrice(
-            data?.activeOrder.subTotalWithTax,
-            data?.activeOrder.currencyCode
-          )}
+          {loading
+            ? '$ --.--'
+            : parsePrice(
+                data?.activeOrder.subTotalWithTax,
+                data?.activeOrder.currencyCode
+              )}
         </div>
         <img className="header-cart" src={cart} alt="header-cart" />
       </div>

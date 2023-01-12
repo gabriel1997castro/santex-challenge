@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { GET_PRODUCTS } from '../graphql/queries';
 import { parseProductList } from '../helpers/parseProductList';
 import { Products } from '../models/Product';
+import Loading from './Loading';
 import ProductCard from './ProductCard';
 
 const StyledProductList = styled.div`
@@ -31,11 +32,23 @@ const StyledProductList = styled.div`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+`;
+
 export function ProductList() {
   const { data, loading } = useQuery<{ products: Products }>(GET_PRODUCTS);
   const products = parseProductList(data?.products);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading)
+    return (
+      <Container>
+        <Loading />
+      </Container>
+    );
   return (
     <StyledProductList>
       {products.map((product) => (
