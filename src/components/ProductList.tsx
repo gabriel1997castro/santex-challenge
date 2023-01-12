@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import styled from 'styled-components';
 import { GET_PRODUCTS } from '../graphql/queries';
 import { parseProductList } from '../helpers/parseProductList';

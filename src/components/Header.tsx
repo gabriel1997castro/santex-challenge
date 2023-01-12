@@ -1,8 +1,10 @@
 import { useQuery } from '@apollo/client';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import cart from '../assets/icons8-carrinho-de-compras-50.png';
 import { GET_SUBTOTAL } from '../graphql/queries';
 import { parsePrice } from '../helpers/parsePrice';
+import useStateWithStorage from '../hooks/useStateWithStorage';
 import { Order } from '../models/Order';
 
 const StyledHeader = styled.header`
@@ -32,7 +34,17 @@ const StyledHeader = styled.header`
 `;
 
 export function Header() {
+  const [activeOrder, setActiveOrder] = useStateWithStorage(
+    'activeOrder',
+    null
+  );
+
   const { data, loading } = useQuery<{ activeOrder: Order }>(GET_SUBTOTAL);
+
+  useEffect(() => {
+    if (JSON.stringify(data?.activeOrder) !== JSON.stringify(activeOrder))
+      setActiveOrder(data?.activeOrder);
+  }, [data]);
 
   return (
     <StyledHeader>
@@ -43,11 +55,11 @@ export function Header() {
       />
       <div className="header-price-container">
         <div>
-          {loading
+          {loading && !activeOrder
             ? '$ --.--'
             : parsePrice(
-                data?.activeOrder.subTotalWithTax,
-                data?.activeOrder.currencyCode
+                activeOrder?.subTotalWithTax,
+                activeOrder?.currencyCode
               )}
         </div>
         <img className="header-cart" src={cart} alt="header-cart" />
