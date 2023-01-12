@@ -59,6 +59,12 @@ const StyledProductCard = styled.div`
     margin-right: 1rem;
     color: #08284c;
     font-weight: 700;
+
+    :hover {
+      filter: brightness(90%);
+      color: #2d1b65;
+      transition: 0.3s;
+    }
   }
 
   .price-row {
@@ -102,7 +108,6 @@ export default function ProductCard({
   description,
   name,
   image,
-  price,
   priceWithTax,
   currencyCode,
   id,

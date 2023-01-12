@@ -46,7 +46,7 @@ export function ProductList() {
   if (loading)
     return (
       <Container>
-        <Loading />
+        <Loading color="#B3093F" />
       </Container>
     );
   return (
